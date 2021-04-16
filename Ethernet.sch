@@ -1,0 +1,168 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 9
+Title "Mixer: FPGA board"
+Date "2021-03-28"
+Rev "1"
+Comp ""
+Comment1 "License: CC-BY-SA 4.0"
+Comment2 "Author: Tobias Müller, twam.info"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C_Small C?
+U 1 1 6086DDC9
+P 3600 3750
+AR Path="/6086DDC9" Ref="C?"  Part="1" 
+AR Path="/6080FDA3/6086DDC9" Ref="C301"  Part="1" 
+AR Path="/60874CB5/6086DDC9" Ref="C401"  Part="1" 
+F 0 "C401" H 3692 3796 50  0000 L CNN
+F 1 "100n" H 3692 3705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3600 3750 50  0001 C CNN
+F 3 "~" H 3600 3750 50  0001 C CNN
+F 4 "C14663" H 3600 3750 50  0001 C CNN "LCSC"
+	1    3600 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L twam-Misc:48F-01GY2DPLXNL J?
+U 1 1 6086DDD0
+P 4050 2900
+AR Path="/6086DDD0" Ref="J?"  Part="1" 
+AR Path="/6080FDA3/6086DDD0" Ref="J301"  Part="1" 
+AR Path="/60874CB5/6086DDD0" Ref="J401"  Part="1" 
+F 0 "J401" H 3750 3750 50  0000 L CNN
+F 1 "48F-01GY2DPLXNL" V 4400 2550 50  0000 L CNN
+F 2 "twam-Misc:48F-01GY2DPLXNL" H 4050 2650 50  0001 C CNN
+F 3 "" H 4050 2650 50  0001 C CNN
+F 4 "C123172" H 4050 2900 50  0001 C CNN "LCSC"
+	1    4050 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 2700 3650 2700
+Wire Wire Line
+	3600 2800 3650 2800
+Wire Wire Line
+	3600 3100 3650 3100
+Wire Wire Line
+	3650 3000 3600 3000
+Wire Wire Line
+	3600 2900 3650 2900
+Wire Wire Line
+	3650 3200 3600 3200
+Wire Wire Line
+	3600 3300 3650 3300
+Wire Wire Line
+	3600 3400 3650 3400
+Wire Wire Line
+	3650 3500 3600 3500
+Wire Wire Line
+	3600 3500 3600 3600
+Wire Wire Line
+	3600 3600 3650 3600
+Wire Wire Line
+	3600 3650 3600 3600
+Connection ~ 3600 3600
+$Comp
+L power:GND #PWR?
+U 1 1 6086DDEB
+P 3600 3900
+AR Path="/6086DDEB" Ref="#PWR?"  Part="1" 
+AR Path="/6080FDA3/6086DDEB" Ref="#PWR0110"  Part="1" 
+AR Path="/60874CB5/6086DDEB" Ref="#PWR0150"  Part="1" 
+F 0 "#PWR0150" H 3600 3650 50  0001 C CNN
+F 1 "GND" H 3605 3727 50  0000 C CNN
+F 2 "" H 3600 3900 50  0001 C CNN
+F 3 "" H 3600 3900 50  0001 C CNN
+	1    3600 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3900 3600 3850
+$Comp
+L Device:R_Small R?
+U 1 1 6086DDF2
+P 3400 2500
+AR Path="/6086DDF2" Ref="R?"  Part="1" 
+AR Path="/6080FDA3/6086DDF2" Ref="R302"  Part="1" 
+AR Path="/60874CB5/6086DDF2" Ref="R402"  Part="1" 
+F 0 "R402" V 3450 2400 50  0000 R CNN
+F 1 "1k" V 3450 2600 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3400 2500 50  0001 C CNN
+F 3 "~" H 3400 2500 50  0001 C CNN
+F 4 "C21190" V 3400 2500 50  0001 C CNN "LCSC"
+	1    3400 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3500 2500 3650 2500
+$Comp
+L Device:R_Small R?
+U 1 1 6086DDF9
+P 3400 2400
+AR Path="/6086DDF9" Ref="R?"  Part="1" 
+AR Path="/6080FDA3/6086DDF9" Ref="R301"  Part="1" 
+AR Path="/60874CB5/6086DDF9" Ref="R401"  Part="1" 
+F 0 "R401" V 3450 2300 50  0000 R CNN
+F 1 "1k" V 3450 2500 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3400 2400 50  0001 C CNN
+F 3 "~" H 3400 2400 50  0001 C CNN
+F 4 "C21190" V 3400 2400 50  0001 C CNN "LCSC"
+	1    3400 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6086DDFF
+P 3100 2550
+AR Path="/6086DDFF" Ref="#PWR?"  Part="1" 
+AR Path="/6080FDA3/6086DDFF" Ref="#PWR0111"  Part="1" 
+AR Path="/60874CB5/6086DDFF" Ref="#PWR0151"  Part="1" 
+F 0 "#PWR0151" H 3100 2300 50  0001 C CNN
+F 1 "GND" H 3105 2377 50  0000 C CNN
+F 2 "" H 3100 2550 50  0001 C CNN
+F 3 "" H 3100 2550 50  0001 C CNN
+	1    3100 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2500 3100 2500
+Wire Wire Line
+	3100 2500 3100 2550
+Connection ~ 3100 2500
+Wire Wire Line
+	3600 2200 3650 2200
+Wire Wire Line
+	3500 2400 3650 2400
+Wire Wire Line
+	3300 2400 3100 2400
+Wire Wire Line
+	3100 2400 3100 2500
+Wire Wire Line
+	3600 2300 3650 2300
+Text HLabel 3600 2700 0    50   Input ~ 0
+1P
+Text HLabel 3600 2800 0    50   Input ~ 0
+1N
+Text HLabel 3600 2900 0    50   Input ~ 0
+2P
+Text HLabel 3600 3000 0    50   Input ~ 0
+2N
+Text HLabel 3600 3100 0    50   Input ~ 0
+3P
+Text HLabel 3600 3200 0    50   Input ~ 0
+3N
+Text HLabel 3600 3300 0    50   Input ~ 0
+4P
+Text HLabel 3600 3400 0    50   Input ~ 0
+4N
+Text HLabel 3600 2200 0    50   Input ~ 0
+LED_GREEN
+Text HLabel 3600 2300 0    50   Input ~ 0
+LED_YELLOW
+$EndSCHEMATC

@@ -1,0 +1,487 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 9
+Title "Mixer: FPGA board"
+Date "2021-03-28"
+Rev "1"
+Comp ""
+Comment1 "License: CC-BY-SA 4.0"
+Comment2 "Author: Tobias Müller, twam.info"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J601
+U 1 1 608A2F7D
+P 3200 2050
+F 0 "J601" H 3250 2367 50  0000 C CNN
+F 1 "DAC1" H 3250 2276 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 3200 2050 50  0001 C CNN
+F 3 "~" H 3200 2050 50  0001 C CNN
+	1    3200 2050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 1950 2850 1950
+Wire Wire Line
+	2850 1950 2850 2050
+$Comp
+L power:GND #PWR0199
+U 1 1 608B8F6B
+P 2850 2300
+F 0 "#PWR0199" H 2850 2050 50  0001 C CNN
+F 1 "GND" H 2855 2127 50  0000 C CNN
+F 2 "" H 2850 2300 50  0001 C CNN
+F 3 "" H 2850 2300 50  0001 C CNN
+	1    2850 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 2250 2900 2250
+Connection ~ 2850 2250
+Wire Wire Line
+	2850 2250 2850 2300
+Wire Wire Line
+	2850 2150 2900 2150
+Connection ~ 2850 2150
+Wire Wire Line
+	2850 2150 2850 2250
+Wire Wire Line
+	2850 2050 2900 2050
+Connection ~ 2850 2050
+Wire Wire Line
+	2850 2050 2850 2150
+Text HLabel 3450 1950 2    50   Input ~ 0
+MCLK1
+Text HLabel 3450 2050 2    50   Input ~ 0
+LRCLK1
+Text HLabel 3450 2150 2    50   Input ~ 0
+BCLK1
+Text HLabel 3450 2250 2    50   Input ~ 0
+SDIN1
+Wire Wire Line
+	3400 2250 3450 2250
+Wire Wire Line
+	3400 2150 3450 2150
+Wire Wire Line
+	3400 2050 3450 2050
+Wire Wire Line
+	3400 1950 3450 1950
+$Comp
+L Connector_Generic:Conn_01x05 J602
+U 1 1 608D6D5B
+P 5550 2050
+F 0 "J602" H 5630 2092 50  0000 L CNN
+F 1 "I2C1" H 5630 2001 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 5550 2050 50  0001 C CNN
+F 3 "~" H 5550 2050 50  0001 C CNN
+	1    5550 2050
+	1    0    0    -1  
+$EndComp
+Text HLabel 5300 2150 0    50   Input ~ 0
+SCL1
+Text HLabel 5300 2050 0    50   Input ~ 0
+SDA1
+Text HLabel 5300 1950 0    50   Input ~ 0
+IRQ1
+Text HLabel 5300 1850 0    50   Input ~ 0
+Mute1
+Wire Wire Line
+	5300 1850 5350 1850
+Wire Wire Line
+	5300 1950 5350 1950
+Wire Wire Line
+	5300 2050 5350 2050
+Wire Wire Line
+	5300 2150 5350 2150
+$Comp
+L power:GND #PWR0112
+U 1 1 608DA0D6
+P 5300 2300
+F 0 "#PWR0112" H 5300 2050 50  0001 C CNN
+F 1 "GND" H 5305 2127 50  0000 C CNN
+F 2 "" H 5300 2300 50  0001 C CNN
+F 3 "" H 5300 2300 50  0001 C CNN
+	1    5300 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2300 5300 2250
+Wire Wire Line
+	5300 2250 5350 2250
+Wire Wire Line
+	5300 4050 5350 4050
+Wire Wire Line
+	5300 4100 5300 4050
+$Comp
+L power:GND #PWR0113
+U 1 1 608DD068
+P 5300 4100
+F 0 "#PWR0113" H 5300 3850 50  0001 C CNN
+F 1 "GND" H 5305 3927 50  0000 C CNN
+F 2 "" H 5300 4100 50  0001 C CNN
+F 3 "" H 5300 4100 50  0001 C CNN
+	1    5300 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3950 5350 3950
+Wire Wire Line
+	5300 3850 5350 3850
+Wire Wire Line
+	5300 3750 5350 3750
+Wire Wire Line
+	5300 3650 5350 3650
+Text HLabel 5300 3650 0    50   Input ~ 0
+Mute3
+Text HLabel 5300 3750 0    50   Input ~ 0
+IRQ3
+Text HLabel 5300 3850 0    50   Input ~ 0
+SDA3
+Text HLabel 5300 3950 0    50   Input ~ 0
+SCL3
+$Comp
+L Connector_Generic:Conn_01x05 J622
+U 1 1 608DD05A
+P 5550 3850
+F 0 "J622" H 5630 3892 50  0000 L CNN
+F 1 "I2C1" H 5630 3801 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 5550 3850 50  0001 C CNN
+F 3 "~" H 5550 3850 50  0001 C CNN
+	1    5550 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3100 5350 3100
+Wire Wire Line
+	5300 3150 5300 3100
+$Comp
+L power:GND #PWR0114
+U 1 1 608DB68B
+P 5300 3150
+F 0 "#PWR0114" H 5300 2900 50  0001 C CNN
+F 1 "GND" H 5305 2977 50  0000 C CNN
+F 2 "" H 5300 3150 50  0001 C CNN
+F 3 "" H 5300 3150 50  0001 C CNN
+	1    5300 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3000 5350 3000
+Wire Wire Line
+	5300 2900 5350 2900
+Wire Wire Line
+	5300 2800 5350 2800
+Wire Wire Line
+	5300 2700 5350 2700
+Text HLabel 5300 2700 0    50   Input ~ 0
+Mute2
+Text HLabel 5300 2800 0    50   Input ~ 0
+IRQ2
+Text HLabel 5300 2900 0    50   Input ~ 0
+SDA2
+Text HLabel 5300 3000 0    50   Input ~ 0
+SCL2
+$Comp
+L Connector_Generic:Conn_01x05 J612
+U 1 1 608DB67D
+P 5550 2900
+F 0 "J612" H 5630 2942 50  0000 L CNN
+F 1 "I2C1" H 5630 2851 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 5550 2900 50  0001 C CNN
+F 3 "~" H 5550 2900 50  0001 C CNN
+	1    5550 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2800 3450 2800
+Wire Wire Line
+	3400 2900 3450 2900
+Wire Wire Line
+	3400 3000 3450 3000
+Wire Wire Line
+	3400 3100 3450 3100
+Wire Wire Line
+	3400 4000 3450 4000
+Wire Wire Line
+	3400 3900 3450 3900
+Wire Wire Line
+	3400 3800 3450 3800
+Wire Wire Line
+	3400 3700 3450 3700
+Wire Wire Line
+	2850 3800 2900 3800
+Wire Wire Line
+	2850 3800 2850 3900
+Connection ~ 2850 3900
+Wire Wire Line
+	2850 3900 2900 3900
+Wire Wire Line
+	2850 3900 2850 4000
+Wire Wire Line
+	2850 4000 2850 4050
+Connection ~ 2850 4000
+Wire Wire Line
+	2850 4000 2900 4000
+$Comp
+L power:GND #PWR0201
+U 1 1 608BD728
+P 2850 4050
+F 0 "#PWR0201" H 2850 3800 50  0001 C CNN
+F 1 "GND" H 2855 3877 50  0000 C CNN
+F 2 "" H 2850 4050 50  0001 C CNN
+F 3 "" H 2850 4050 50  0001 C CNN
+	1    2850 4050
+	1    0    0    -1  
+$EndComp
+Connection ~ 2850 3800
+Wire Wire Line
+	2850 3700 2850 3800
+Wire Wire Line
+	2900 3700 2850 3700
+Wire Wire Line
+	2850 2900 2900 2900
+Wire Wire Line
+	2850 2900 2850 3000
+Connection ~ 2850 3000
+Wire Wire Line
+	2850 3000 2900 3000
+Wire Wire Line
+	2850 3000 2850 3100
+Wire Wire Line
+	2850 3100 2850 3150
+Connection ~ 2850 3100
+Wire Wire Line
+	2850 3100 2900 3100
+$Comp
+L power:GND #PWR0200
+U 1 1 608BC5F4
+P 2850 3150
+F 0 "#PWR0200" H 2850 2900 50  0001 C CNN
+F 1 "GND" H 2855 2977 50  0000 C CNN
+F 2 "" H 2850 3150 50  0001 C CNN
+F 3 "" H 2850 3150 50  0001 C CNN
+	1    2850 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 2850 2900
+Wire Wire Line
+	2850 2800 2850 2900
+Wire Wire Line
+	2900 2800 2850 2800
+Text HLabel 3450 4000 2    50   Input ~ 0
+SDIN3
+Text HLabel 3450 3900 2    50   Input ~ 0
+BCLK3
+Text HLabel 3450 3800 2    50   Input ~ 0
+LRCLK3
+Text HLabel 3450 3700 2    50   Input ~ 0
+MCLK3
+Text HLabel 3450 3100 2    50   Input ~ 0
+SDIN2
+Text HLabel 3450 3000 2    50   Input ~ 0
+BCLK2
+Text HLabel 3450 2900 2    50   Input ~ 0
+LRCLK2
+Text HLabel 3450 2800 2    50   Input ~ 0
+MCLK2
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J621
+U 1 1 608A3EEB
+P 3200 3800
+F 0 "J621" H 3250 4117 50  0000 C CNN
+F 1 "DAC3" H 3250 4026 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 3200 3800 50  0001 C CNN
+F 3 "~" H 3200 3800 50  0001 C CNN
+	1    3200 3800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J611
+U 1 1 608A3615
+P 3200 2900
+F 0 "J611" H 3250 3217 50  0000 C CNN
+F 1 "DAC2" H 3250 3126 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 3200 2900 50  0001 C CNN
+F 3 "~" H 3200 2900 50  0001 C CNN
+	1    3200 2900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R601
+U 1 1 608DFCAC
+P 6750 2000
+F 0 "R601" H 6809 2046 50  0000 L CNN
+F 1 "4k7" H 6809 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6750 2000 50  0001 C CNN
+F 3 "~" H 6750 2000 50  0001 C CNN
+F 4 "C23162" H 6750 2000 50  0001 C CNN "LCSC"
+	1    6750 2000
+	1    0    0    -1  
+$EndComp
+Text HLabel 6750 2150 3    50   Input ~ 0
+SDA1
+Wire Wire Line
+	6750 2150 6750 2100
+$Comp
+L power:+3V3 #PWR0115
+U 1 1 608E1546
+P 6750 1850
+F 0 "#PWR0115" H 6750 1700 50  0001 C CNN
+F 1 "+3V3" H 6765 2023 50  0000 C CNN
+F 2 "" H 6750 1850 50  0001 C CNN
+F 3 "" H 6750 1850 50  0001 C CNN
+	1    6750 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 1850 6750 1900
+$Comp
+L Device:R_Small R602
+U 1 1 608E3E70
+P 7100 2000
+F 0 "R602" H 7159 2046 50  0000 L CNN
+F 1 "4k7" H 7159 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7100 2000 50  0001 C CNN
+F 3 "~" H 7100 2000 50  0001 C CNN
+F 4 "C23162" H 7100 2000 50  0001 C CNN "LCSC"
+	1    7100 2000
+	1    0    0    -1  
+$EndComp
+Text HLabel 7100 2150 3    50   Input ~ 0
+SCL1
+Wire Wire Line
+	7100 2150 7100 2100
+$Comp
+L power:+3V3 #PWR0116
+U 1 1 608E3E78
+P 7100 1850
+F 0 "#PWR0116" H 7100 1700 50  0001 C CNN
+F 1 "+3V3" H 7115 2023 50  0000 C CNN
+F 2 "" H 7100 1850 50  0001 C CNN
+F 3 "" H 7100 1850 50  0001 C CNN
+	1    7100 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 1850 7100 1900
+$Comp
+L Device:R_Small R611
+U 1 1 608E91F3
+P 7400 2000
+F 0 "R611" H 7459 2046 50  0000 L CNN
+F 1 "4k7" H 7459 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7400 2000 50  0001 C CNN
+F 3 "~" H 7400 2000 50  0001 C CNN
+F 4 "C23162" H 7400 2000 50  0001 C CNN "LCSC"
+	1    7400 2000
+	1    0    0    -1  
+$EndComp
+Text HLabel 7400 2150 3    50   Input ~ 0
+SDA2
+Wire Wire Line
+	7400 2150 7400 2100
+$Comp
+L power:+3V3 #PWR0117
+U 1 1 608E91FB
+P 7400 1850
+F 0 "#PWR0117" H 7400 1700 50  0001 C CNN
+F 1 "+3V3" H 7415 2023 50  0000 C CNN
+F 2 "" H 7400 1850 50  0001 C CNN
+F 3 "" H 7400 1850 50  0001 C CNN
+	1    7400 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 1850 7400 1900
+$Comp
+L Device:R_Small R612
+U 1 1 608E9203
+P 7700 2000
+F 0 "R612" H 7759 2046 50  0000 L CNN
+F 1 "4k7" H 7759 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7700 2000 50  0001 C CNN
+F 3 "~" H 7700 2000 50  0001 C CNN
+F 4 "C23162" H 7700 2000 50  0001 C CNN "LCSC"
+	1    7700 2000
+	1    0    0    -1  
+$EndComp
+Text HLabel 7700 2150 3    50   Input ~ 0
+SCL2
+Wire Wire Line
+	7700 2150 7700 2100
+$Comp
+L power:+3V3 #PWR0118
+U 1 1 608E920B
+P 7700 1850
+F 0 "#PWR0118" H 7700 1700 50  0001 C CNN
+F 1 "+3V3" H 7715 2023 50  0000 C CNN
+F 2 "" H 7700 1850 50  0001 C CNN
+F 3 "" H 7700 1850 50  0001 C CNN
+	1    7700 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 1850 7700 1900
+$Comp
+L Device:R_Small R621
+U 1 1 608EF1FF
+P 8000 2000
+F 0 "R621" H 8059 2046 50  0000 L CNN
+F 1 "4k7" H 8059 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 8000 2000 50  0001 C CNN
+F 3 "~" H 8000 2000 50  0001 C CNN
+F 4 "C23162" H 8000 2000 50  0001 C CNN "LCSC"
+	1    8000 2000
+	1    0    0    -1  
+$EndComp
+Text HLabel 8000 2150 3    50   Input ~ 0
+SDA3
+Wire Wire Line
+	8000 2150 8000 2100
+$Comp
+L power:+3V3 #PWR0119
+U 1 1 608EF207
+P 8000 1850
+F 0 "#PWR0119" H 8000 1700 50  0001 C CNN
+F 1 "+3V3" H 8015 2023 50  0000 C CNN
+F 2 "" H 8000 1850 50  0001 C CNN
+F 3 "" H 8000 1850 50  0001 C CNN
+	1    8000 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 1850 8000 1900
+$Comp
+L Device:R_Small R622
+U 1 1 608EF20F
+P 8300 2000
+F 0 "R622" H 8359 2046 50  0000 L CNN
+F 1 "4k7" H 8359 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 8300 2000 50  0001 C CNN
+F 3 "~" H 8300 2000 50  0001 C CNN
+F 4 "C23162" H 8300 2000 50  0001 C CNN "LCSC"
+	1    8300 2000
+	1    0    0    -1  
+$EndComp
+Text HLabel 8300 2150 3    50   Input ~ 0
+SCL3
+Wire Wire Line
+	8300 2150 8300 2100
+$Comp
+L power:+3V3 #PWR0120
+U 1 1 608EF217
+P 8300 1850
+F 0 "#PWR0120" H 8300 1700 50  0001 C CNN
+F 1 "+3V3" H 8315 2023 50  0000 C CNN
+F 2 "" H 8300 1850 50  0001 C CNN
+F 3 "" H 8300 1850 50  0001 C CNN
+	1    8300 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 1850 8300 1900
+$EndSCHEMATC
